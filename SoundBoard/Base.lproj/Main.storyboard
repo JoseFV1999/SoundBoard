@@ -92,20 +92,46 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tiempo transcurrido" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tE-GT-Wne">
+                                <rect key="frame" x="129" y="423" width="156" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykG-py-jKQ">
+                                <rect key="frame" x="190.5" y="464" width="33.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="xNK-MC-OZw">
+                                <rect key="frame" x="18" y="535" width="378" height="31"/>
+                                <connections>
+                                    <action selector="controlVolumen:" destination="4CV-Fa-JmR" eventType="valueChanged" id="05g-b5-IiT"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="3tE-GT-Wne" firstAttribute="centerX" secondItem="kaE-Cj-Cm8" secondAttribute="centerX" id="5Fo-6N-3m6"/>
                             <constraint firstItem="PfI-KF-JLb" firstAttribute="top" secondItem="U5P-lU-WD7" secondAttribute="top" constant="20" id="6zX-uB-VJU"/>
+                            <constraint firstItem="U5P-lU-WD7" firstAttribute="trailing" secondItem="xNK-MC-OZw" secondAttribute="trailing" constant="20" id="7D8-XH-tW0"/>
+                            <constraint firstItem="ykG-py-jKQ" firstAttribute="top" secondItem="3tE-GT-Wne" secondAttribute="bottom" constant="20" id="9Vw-14-ssC"/>
                             <constraint firstItem="rCR-da-gxi" firstAttribute="leading" secondItem="U5P-lU-WD7" secondAttribute="leading" constant="20" id="BE6-ID-s7a"/>
                             <constraint firstItem="cf2-yX-65i" firstAttribute="leading" secondItem="U5P-lU-WD7" secondAttribute="leading" constant="20" id="EnK-UJ-yn3"/>
                             <constraint firstItem="mHb-ej-4Ey" firstAttribute="centerX" secondItem="PfI-KF-JLb" secondAttribute="centerX" id="I6S-EE-s0J"/>
+                            <constraint firstItem="ykG-py-jKQ" firstAttribute="centerX" secondItem="3tE-GT-Wne" secondAttribute="centerX" id="S2Q-0Q-sV5"/>
+                            <constraint firstItem="xNK-MC-OZw" firstAttribute="centerX" secondItem="ykG-py-jKQ" secondAttribute="centerX" id="TO5-Dn-dIr"/>
+                            <constraint firstItem="3tE-GT-Wne" firstAttribute="top" secondItem="kaE-Cj-Cm8" secondAttribute="bottom" constant="40" id="TgU-fw-nPs"/>
                             <constraint firstItem="cf2-yX-65i" firstAttribute="top" secondItem="rCR-da-gxi" secondAttribute="bottom" constant="20" id="U58-FD-7it"/>
                             <constraint firstItem="U5P-lU-WD7" firstAttribute="trailing" secondItem="rCR-da-gxi" secondAttribute="trailing" constant="20" id="W7P-pi-BYX"/>
                             <constraint firstItem="mHb-ej-4Ey" firstAttribute="top" secondItem="PfI-KF-JLb" secondAttribute="bottom" constant="20" id="WZC-Bq-LOt"/>
                             <constraint firstItem="rCR-da-gxi" firstAttribute="top" secondItem="mHb-ej-4Ey" secondAttribute="bottom" constant="30" id="ZwI-uR-uFs"/>
+                            <constraint firstItem="xNK-MC-OZw" firstAttribute="leading" secondItem="U5P-lU-WD7" secondAttribute="leading" constant="20" id="eZf-Yz-XhN"/>
                             <constraint firstItem="kaE-Cj-Cm8" firstAttribute="top" secondItem="cf2-yX-65i" secondAttribute="bottom" constant="20" id="hR8-SE-nYA"/>
                             <constraint firstItem="U5P-lU-WD7" firstAttribute="trailing" secondItem="cf2-yX-65i" secondAttribute="trailing" constant="20" id="iPb-Tr-oai"/>
                             <constraint firstItem="cf2-yX-65i" firstAttribute="centerX" secondItem="rCR-da-gxi" secondAttribute="centerX" id="lLg-as-vc3"/>
+                            <constraint firstItem="xNK-MC-OZw" firstAttribute="top" secondItem="ykG-py-jKQ" secondAttribute="bottom" constant="50" id="s8y-aG-qLb"/>
                             <constraint firstItem="rCR-da-gxi" firstAttribute="centerX" secondItem="mHb-ej-4Ey" secondAttribute="centerX" id="vdV-Nb-MH7"/>
                             <constraint firstItem="kaE-Cj-Cm8" firstAttribute="centerX" secondItem="cf2-yX-65i" secondAttribute="centerX" id="xah-JK-kbe"/>
                             <constraint firstItem="PfI-KF-JLb" firstAttribute="centerX" secondItem="U5P-lU-WD7" secondAttribute="centerX" id="xrh-LF-Kag"/>
@@ -118,6 +144,8 @@
                         <outlet property="grabarButton" destination="PfI-KF-JLb" id="ngi-ph-Aqc"/>
                         <outlet property="nombreTextField" destination="cf2-yX-65i" id="0pH-OQ-3OG"/>
                         <outlet property="reproducirButton" destination="mHb-ej-4Ey" id="ZN1-l8-fL8"/>
+                        <outlet property="slider" destination="xNK-MC-OZw" id="1L3-Yt-4i4"/>
+                        <outlet property="tiempoTranscurrido" destination="ykG-py-jKQ" id="BDc-ra-kzv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mgf-4N-0se" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
